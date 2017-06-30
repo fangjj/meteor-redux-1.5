@@ -7,9 +7,7 @@ import {syncHistoryWithStore} from 'react-router-redux';
 import store from '/imports/store/index';
 
 import App from '/imports/app/view/index';
-
-import Login from '/imports/user/view/Login.jsx';
-import Register from '/imports/user/view/Register.jsx';
+import {view as User} from '/imports/user/index';
 //import AuthPageSignIn from '../../ui/pages/AuthPageSignIn.jsx';
 //import AuthPageJoin from '../../ui/pages/AuthPageJoin.jsx';
 //import NotFoundPage from '../../ui/pages/NotFoundPage.jsx';
@@ -20,8 +18,8 @@ const Routes = () => {
     return (
         <Router history={history}>
             <Route path="/" component={App}>
-                <Route path="login" component={Login} />
-                <Route path="register" component={Register} />
+                <Route path="login" component={User.Login} />
+                <Route path="register" component={User.Register} />
             </Route>
         </Router>
     );

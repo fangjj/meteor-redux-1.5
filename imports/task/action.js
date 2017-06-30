@@ -2,14 +2,12 @@
  * Created by jim on 2017/6/23.
  */
 import { Meteor } from 'meteor/meteor';
-import { startSubscription } from 'meteor-redux-middlewares';
-import { stopSubscription } from 'meteor-redux-middlewares';
+import { startSubscription, stopSubscription } from 'meteor-redux-middlewares';
 
 import { Task } from '/imports/task/api/task';
 
 import {
     TASK_LIST_SUBSCRIPTION,
-    STOP_SUBSCRIPTION,
     TASK_INSERT_METHOD,
     TASK_LIST_METHOD,
 } from './actionType';
@@ -43,7 +41,7 @@ export const loadData = (type) => {
 };
 
 export const stopData = () => {
-    return stopSubscription(STOP_SUBSCRIPTION);
+    return stopSubscription(TASK_LIST_SUBSCRIPTION);
 };
 
 export const addData = (_id, text) => {

@@ -4,10 +4,11 @@
 import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base';
 
-import { startSubscription } from 'meteor-redux-middlewares';
-import { stopSubscription } from 'meteor-redux-middlewares';
-
-import { registerReactiveSource } from 'meteor-redux-middlewares';
+import {
+    registerReactiveSource,
+    startSubscription,
+    stopSubscription
+} from 'meteor-redux-middlewares';
 
 import { User } from '/imports/user/api/user';
 import {
@@ -40,7 +41,7 @@ export const loadData = () => {
 };
 
 export const stopData = () => {
-    return stopSubscription(STOP_SUBSCRIPTION);
+    return stopSubscription(USER_ME_SUBSCRIPTION);
 };
 
 export const logout = () => {

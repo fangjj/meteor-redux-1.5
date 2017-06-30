@@ -4,6 +4,6 @@
 
 import * as actions from './action';
 import reducer from './reducer';
-import * as view from './view/index';
+import view from './view/index';
 
 export {actions, reducer, view};

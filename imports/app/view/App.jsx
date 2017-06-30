@@ -6,17 +6,17 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import './App.less';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-
+import { connect } from 'react-redux';
+import {actions as sessionAcions} from '/imports/session/index';
 import {view as Language} from '/imports/language/index';
 import {view as Status} from '/imports/status/index';
 import {view as User} from '/imports/user/index';
-import {actions as sessionAcions} from '/imports/session/index';
+
 
 class App extends Component {
 
     constructor() {
         super(...arguments);
-
     }
 
     componentDidMount() {
@@ -37,6 +37,7 @@ class App extends Component {
             <div id="container" className={menu ? 'menu-open' : ''}>
                 <section id="menu">
                     <Language></Language>
+                    <User.User></User.User>
                 </section>
                 <Status></Status>
                 <div className="content-overlay" onClick={this.toggleMenu}></div>
@@ -74,4 +75,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(App);
