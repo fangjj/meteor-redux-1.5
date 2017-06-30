@@ -10,6 +10,7 @@ import {
     stopSubscription
 } from 'meteor-redux-middlewares';
 
+
 import { User } from '/imports/user/api/user';
 import {
     USER_LOGOUT,
@@ -69,6 +70,7 @@ export const login = (user, password) => {
         });
     };
 };
+
 
 export const register = (options) => {
     return (dispatch, getState) => {

@@ -23,7 +23,6 @@ const initState = {
     error: {},
     login: {},
     register: {},
-
 };
 
 export default (state = initState, action) => {
