@@ -5,5 +5,6 @@
 //import '/imports/task/api/server/publication';
 //import '/imports/user/api/server/publication';
 
-import '/imports/list/api/server/publication';
-import '/imports/language/api/methods';
+import '/imports/api/list/server/publication';
+import '/imports/api/list/methods';
+import '/imports/api/language/methods';

@@ -8,7 +8,7 @@ import {createStore, applyMiddleware} from 'redux';
 import { devToolsEnhancer, composeWithDevTools } from 'redux-devtools-extension';
 
 
-import reducer from './reducer';
+import reducer from '/imports/reducers/index';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 
